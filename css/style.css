@@ -27,6 +27,12 @@ body{
     font-size: 14px;
 }
 
+.container {
+    width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
 .main{
     min-height: 100vh;
     position: relative;    
