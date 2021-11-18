@@ -1,0 +1,93 @@
+
+.dark-theme{
+    --bg: hsl(230, 17%, 14%);
+    --bg-top: hsl(232, 19%, 15%);
+    --bg-card: hsl(228, 28%, 20%);
+    --secondary-text: hsl(228, 34%, 66%);
+    --primary-text: hsl(0, 0%, 100%);
+}
+
+.light-theme{
+    --bg: hsl(0, 0%, 100%);
+    --bg-top: hsl(225, 100%, 98%);
+    --bg-card: hsl(227, 47%, 96%);
+    --secondary-text: hsl(228, 12%, 44%);
+    --primary-text: hsl(230, 17%, 14%);
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.main{
+    min-height: 100vh;
+    position: relative;    
+    padding: 40px 25px 45px;
+    color: var(--primary-text);
+    background-color: var(--bg);
+}
+
+
+.main::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 240px;
+    right: 0;
+
+    border-radius: 0 0 30px 30px;
+    background-color: var(--bg-top);
+    z-index: -2;
+}
+
+
+.toggle{
+    cursor: pointer;
+    z-index: 9999;
+}
+.toggle>input{
+    display: none;
+
+}
+
+.toggle-btn{
+    display: block;
+    position: relative;
+    width: 48px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: hsl(230, 22%, 74%);
+
+    transition: ease-in-out 0.2s;
+}
+
+.toggle-btn::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+    transition: ease-in-out 0.2s;
+
+}
+
+.dark-theme .toggle-btn{
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.dark-theme .toggle-btn::after{
+    left: 2px;
+    background-color: #000000;
+}
